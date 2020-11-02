@@ -17,7 +17,7 @@ int main(){
    
     app.get("/", function(req, res){
         console.log("\nREQUEST HEADER: \n", req.header());
-        res.send("<br><br><h1 style='margin-left:40%; color:red'>Hello World <br> <br> <span style='margin-left:-25%;color:green'>This message is delivered from Espresso Web-Framework :))</span><h1>");
+        res.send("<h1 style='margin-left:40%; color:red'>Hello Espresso<h1>");
     });
 
     app.run(8080,"\n\nEspresso started at: " ); 
@@ -26,3 +26,17 @@ int main(){
 ```
 
 ###DOCUMENTATION
+
+
+
+APIs reference documentation, provides details information about all fuctions and objects of Espresso, 
+this documentation expalins every APIs in more details, so to implement easily C++ projects and all APIs are complete compatible with C++11/14/17.
+Espresso is very fast web-framework hybrid of C++, the main objective is just to make it easy and simple for C++ developers. 
+This framework is built on top of C++14 and above
+
+
+NOTE: It's the first version: Espresso_v_1.0.0, so there may occur some exeptions-throw, error or you find any idea.
+Kindly contact me: sir.ayaz47@gmail.com
+
+
+
