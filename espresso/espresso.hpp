@@ -29,7 +29,7 @@ class espresso
         // static espresso*     m_instance; 
 
     
-}import;
+};
 
 // espresso*     espresso::m_instance = nullptr; 
 
