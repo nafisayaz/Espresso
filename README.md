@@ -5,7 +5,7 @@ Espresso - A web framework that compatible to C++14 and above. Espresso+ compile
 to executable code, c++/stl headers can easily be included in espresso source files. This web framework accept callback function as an argument. 
 Distributed to apt repository from where can be installed on Linux system. APIs reference documentation, provides details information about all 
 fuctions and objects of Espresso, this documentation expalins every APIs in more details, so to implement easily C++ projects and 
-all APIs are complete compatible with C++11/14/17.
+all APIs are complete compatible with C++14/17.
 
 
 
