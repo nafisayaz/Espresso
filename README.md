@@ -27,6 +27,10 @@ int main(){
 
 ###DOCUMENTATION
 
+- [https://nafisayaz.github.io/espresso/doc.html][doc]
+
+[doc]:https://nafisayaz.github.io/espresso/doc.html
+
 
 
 APIs reference documentation, provides details information about all fuctions and objects of Espresso, 
