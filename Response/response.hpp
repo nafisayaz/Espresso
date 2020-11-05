@@ -4,6 +4,7 @@
 #pragma once
 
 #include <iostream>
+#include <fstream>
 
 class Response{
 
@@ -14,6 +15,7 @@ class Response{
         // void set_header(const char* header);
 
         void send(std::string message);
+        void sendfile(std::string filePath);
         std::string get_message();
         void set_response(int socketfd);
 

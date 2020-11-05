@@ -3,8 +3,9 @@
 #include <string>
 #include "../headers/function.hpp"
 
-#define function(req, res) []( const char* req, const char* res)
 
+#define dir "/home/nafis/new_projects/Espresso"
+#define function(req, res) [&]( const char* req, const char* res)
 
 
 // template<typename PATH, typename F = auto >void App::get(PATH path, F f){

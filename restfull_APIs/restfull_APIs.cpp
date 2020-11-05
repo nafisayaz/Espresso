@@ -18,6 +18,8 @@ void push(const char* path, void(*CALLBACK)(Request, Response) ){
 void execute_restfull_APIs(Request req, Response res){
 
     for(ITR itr = REST_APIS.begin(); itr != REST_APIS.end(); ++itr){
-        itr->second.CALLBACK(req,res);
+        if(req.get_path() == itr->first){
+            itr->second.CALLBACK(req,res);
+        }
     }
 }
