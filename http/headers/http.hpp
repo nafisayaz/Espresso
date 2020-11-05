@@ -3,6 +3,8 @@
 
 #include "../../TcpListener/headers/tcpListener.hpp"
 #include "../../restfull_APIs/restfull_APIs.hpp"
+#include "../../parser/header/parser.hpp"
+#include "../../reader/header/reader.hpp"
 
 
 class Http : public TCPListener{
