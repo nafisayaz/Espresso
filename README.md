@@ -16,15 +16,24 @@ Looks easy and simple
 
 int main(){
 
-    auto app = espresso()("http");
+    auto app = espresso();
+
+    app.use("/website");
    
     app.get("/", function(req, res){
-        console.log("\nREQUEST HEADER: \n", req.header());
-        res.send("<h1 style='margin-left:40%; color:red'>Hello Espresso<h1>");
+        res.send("<br><br><br><h1><span style='margin-left:40%;color:green'> Home Page</span></h1>");
+
     });
 
+    app.get("/home", function(req, res){
+        // console.log("\nREQUEST HEADER: \n", req.header());
+        res.sendfile("/index.html");
+    });
+    console.log("PATH: ", __pathname);
     app.run(8080,"\n\nEspresso started at: " ); 
+
 }
+
 
 ```
 

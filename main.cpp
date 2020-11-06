@@ -16,7 +16,7 @@ int main(){
         // console.log("\nREQUEST HEADER: \n", req.header());
         res.sendfile("/index.html");
     });
-
+    console.log("PATH: ", __pathname);
     app.run(8080,"\n\nEspresso started at: " ); 
 
 }
