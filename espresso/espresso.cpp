@@ -59,6 +59,15 @@ void espresso::get(const char* path, void(*foo)(Request, Response)){
     // m_get_thread.join();
 }
 
+void espresso::use(const char* directory){
+    m_use.use(directory);
+}
+void espresso::get_use(){
+    m_use.get_use();
+}
+
+
+
 
 
 

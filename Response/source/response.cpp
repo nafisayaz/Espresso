@@ -7,6 +7,7 @@ void Response::send(std::string message){
 }
 
 void Response::sendfile(std::string filePath){
+    filePath = __pathname + filePath;
 
     const char* c_filePath = filePath.c_str();
     std::fstream f(c_filePath);//, std::ios::in);
