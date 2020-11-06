@@ -11,7 +11,7 @@
 
 
 
-class Request{
+struct Request{
 
     public:
         Request(){}
@@ -27,8 +27,8 @@ class Request{
         std::string accepts(){};
         std::string ip(){};
         std::string state(){};
-        
-    private:
+
+    
         const char*         m_header; // set
         std::string         m_baseUrl;
         std::string         m_body;
@@ -38,6 +38,7 @@ class Request{
         std::string         m_method; // set
         std::string         m_query; 
         std::string         m_params; // set
+        std::string         m_filename;
         std::string         m_protocol; // set
         std::string         m_state; // set
         std::string         m_userAgent; // set

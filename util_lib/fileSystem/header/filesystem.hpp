@@ -29,8 +29,8 @@ class Use{
 
 };
 std::vector<std::string> Use::m_directories;
-std::string FileSystem::current_path        = {}; //fs::current_path();
-std::string FileSystem::file_name           = {}; //fs::current_path();
+std::string FileSystem::current_path        = {}; 
+std::string FileSystem::file_name           = {}; 
 
 #define     __pathname      FileSystem::current_path
 #define     __filename      FileSystem::file_name

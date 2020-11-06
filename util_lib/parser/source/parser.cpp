@@ -33,9 +33,7 @@ void Parser::parse(const char* message){
     m_type = parsed_data[2];
     m_hostname = parsed_data[4];
     m_contentType = parsed_data[19];
-    std::cout << "m_contentType: " << m_contentType <<"\n";
-
-    std::cout << "REQ: \n";
+    
     for(auto& s: parsed_data){
         // std::cout << s <<"\n";
     }
@@ -61,11 +59,9 @@ auto Parser::get_oss(std::string msg){
 
     if(msg == "text/css,*/*;q=0.1")
     {
-        std::cout << "\n\nm_path: \n" << m_path <<"\n";
         oss << "HTTP/1.1 200 OK\r\n";
         oss << "Cache-Control: no-cache, private\r\n";
         oss << "Content-Type: text/css\r\n";
-
     }
     oss << "HTTP/1.1 200 OK\r\n";
     oss << "Cache-Control: no-cache, private\r\n";
