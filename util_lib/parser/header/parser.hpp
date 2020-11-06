@@ -13,6 +13,7 @@
 class Parser{
     public:
         void parse(const char* message );
+        auto parse_header(const char* message )->void; //std::map<std::string, std::string>;
         std::string get_contentType();
         std::string get_m_path();
         auto get_oss(std::string msg);

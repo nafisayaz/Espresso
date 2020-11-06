@@ -2,6 +2,27 @@
 #include "../header/parser.hpp"
 
 
+ auto Parser::parse_header(const char* message )->void{  //std::map<std::string, std::string>{
+    
+    std::stringstream ss(message);
+    std::vector<std::string>data;
+    std::string tmp = {};
+
+    while(std::getline(ss, tmp, '\n')){
+        std::string el={};
+        std::stringstream elss(tmp);
+        while(std::getline(elss, el, ':' )){
+            data.push_back(el);
+        }
+    }
+
+    std::cout <<message<<"\n";
+    for(auto& d: data){
+        std::cout<<d<<"\n";
+    }
+
+}
+
 void Parser::parse(const char* message){
     
     std::istringstream iss(message);
