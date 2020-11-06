@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <functional>
-#include "../../Request/request.hpp"
-#include "../../Response/response.hpp"
+#include "../../Request/headers/request.hpp"
+#include "../../Response/header/response.hpp"
 
 
 #define function(req, res) []( Request req, Response res)

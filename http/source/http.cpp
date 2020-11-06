@@ -12,7 +12,7 @@ void Http::onClientConnected( int socket){
   std::ostringstream oss; //= parser.get_oss(parser.get_contentType());
   std::string content = {};
 
-  if(parser.get_m_path().find("text/css,*/*;q=0.1") != std::string::npos){
+  if(parser.get_m_path().find("text/css") != std::string::npos){
     // std::cout << "================> " << parser.get_contentType() <<"\n";
     
     oss = parser.get_oss(parser.get_contentType());
