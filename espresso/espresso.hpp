@@ -21,6 +21,7 @@ class espresso
         void run(int port, const char* optional_msg);
 
         void get(const char* path, void(*foo)(Request, Response));
+        void post(const char* path, void(*foo)(Request, Response));
         void use(const char* directory);
         void get_use();
 

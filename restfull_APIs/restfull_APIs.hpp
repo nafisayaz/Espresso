@@ -23,11 +23,11 @@ static REST_MAP REST_APIS ;
 
 struct POST{
     const char*                          PATH;
-    void(*CALLBACK)(const char*, const char*);
+    void(*CALLBACK)(Request, Response);
 };
 typedef std::map<std::string, POST> REST_POST;
 typedef std::map<std::string, POST>::iterator ITR_POST; 
-static REST_MAP REST_APIS_POST ;
+static REST_POST REST_APIS_POST ;
 
 struct DELETE{
     const char*                          PATH;

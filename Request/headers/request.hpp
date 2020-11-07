@@ -6,6 +6,7 @@
 #include <istream>
 #include <string>
 #include <iterator>
+#include <functional>
 #include "../../util_lib/fileSystem/header/filesystem.hpp"
 #include "../../util_lib/parser/header/parser.hpp"
 

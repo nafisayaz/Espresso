@@ -14,6 +14,16 @@ void push(const char* path, void(*CALLBACK)(Request, Response) ){
 
 }
 
+void push_post(const char* path, void(*CALLBACK)(Request, Response) ){
+
+    POST post;
+    post.PATH = path;
+    post.CALLBACK = CALLBACK;
+
+    auto pair = std::make_pair(path, post );
+    REST_APIS_POST.insert(pair);
+
+}
 
 void execute_restfull_APIs(Request req, Response res){
 
