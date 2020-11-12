@@ -14,7 +14,7 @@ void Request::set_header(const char* header){
     initialize(data);
     m_filename = fs::path(fs::path(m_params).filename()).extension() != "" ? fs::path(m_params).filename() : "";
     if(m_filename != "") { FileSystem::file_name = m_filename; }
-    std::cout << __filename <<"\n";
+    
     
 }
 
@@ -36,7 +36,12 @@ void Request::initialize(const std::vector<std::string>& data){
 
     int count = 1;
     char delimeter = ' ';
+    bool is_body = false;
     for(auto& d: data){
+        if(count ==17) {
+            is_body = true;
+        }
+        if(is_body){m_body += d;}
         std::vector<std::string> v_str = parse_header(d, [&]()->char{
             return delimeter;
         });

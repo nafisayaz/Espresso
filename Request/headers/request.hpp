@@ -32,7 +32,7 @@ struct Request{
     
         const char*         m_header; // set
         std::string         m_baseUrl;
-        std::string         m_body;
+        std::string         m_body={};
         std::string         m_hostname; // set
         std::string         m_port; // set
         std::string         m_ip; 

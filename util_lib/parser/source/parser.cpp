@@ -63,6 +63,14 @@ auto Parser::get_oss(std::string msg){
         oss << "Cache-Control: no-cache, private\r\n";
         oss << "Content-Type: text/css\r\n";
     }
+    if(msg == "image/avif,image/webp,image/apng,image/*,*/*;q=0.8")
+    {
+        std::cout <<"msg :  " << msg <<"\n\n\n";
+
+        oss << "HTTP/1.1 200 OK\r\n";
+        oss << "Cache-Control: no-cache, private\r\n";
+        oss << "Content-Type: image/*\r\n";
+    }
     oss << "HTTP/1.1 200 OK\r\n";
     oss << "Cache-Control: no-cache, private\r\n";
     oss << "Content-Type: text/html\r\n";

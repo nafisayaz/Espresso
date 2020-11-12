@@ -12,7 +12,12 @@ void Http::onClientConnected( int socket){
   std::ostringstream oss; 
   std::string content = {};
 
-  if(parser.get_m_path().find("text/css") != std::string::npos){
+  if(fs::path(__filename).extension() == ".css"){
+    oss = parser.get_oss(parser.get_contentType());
+    content = reader.read(parser.get_m_path());
+
+  }
+  else if(fs::path(__filename).extension() == ".jpg" ){
     oss = parser.get_oss(parser.get_contentType());
     content = reader.read(parser.get_m_path());
 
@@ -20,7 +25,7 @@ void Http::onClientConnected( int socket){
     oss = parser.get_oss(parser.get_contentType());
     content = res.get_message();
   }
-  oss << "Content-Length: "+content.size()+1<<"\r\n";
+  oss << "Content-Length: " +1<<"\r\n";
   oss << "\r\n";
   oss << content;
 
@@ -45,6 +50,9 @@ void Http::onMessageReceived(int clientSocket){
   res.set_response(clientSocket);
 
   execute_restfull_APIs(req, res);
+  std::cout << __pathname << ":  "<<__filename << " => "<<fs::path(__filename).extension() <<"\n";
+  
+
 
 
 }
