@@ -39,10 +39,10 @@ int main(){
     });
     
 
-    app.post("/post", function(req, res){
-        res.send("<br><br><br><h1><span style='margin-left:40%;color:green'> Home Page</span></h1>");
+    // app.post("/post", function(req, res){
+    //     res.send("<br><br><br><h1><span style='margin-left:40%;color:green'> Home Page</span></h1>");
 
-    });
+    // });
 
 
     app.run(8080,"\n\nEspresso started at: " );
