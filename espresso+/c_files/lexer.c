@@ -454,7 +454,7 @@ char *yytext;
 #line 1 "lexer.l"
 #line 4 "lexer.l"
 
-//#include "test.h"
+#include "test.h"
 
 #include<stdio.h>	
 
@@ -468,7 +468,7 @@ typedef struct lexer
 
 typedef struct grammar grammar;
 
-#include "parser.h"
+#include "./headers/parser.h"
 
 #define YY_DECL int yylex (lexer * l)
 

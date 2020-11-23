@@ -3,6 +3,7 @@
 
 
 void Use::use(const char* directory){
+
     m_directories.push_back(directory);
     FileSystem::current_path = fs::current_path();
     FileSystem::current_path += directory;
@@ -14,3 +15,7 @@ void Use::get_use(){
     }
 }
 
+
+auto FileSystem::dirname()->std::string{ 
+    return fs::current_path(); 
+}

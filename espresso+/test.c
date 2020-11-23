@@ -1,7 +1,7 @@
 
 
 
-#include <test.h>
+#include "test.h"
 #include <stdio.h>
 
 extern int yylex();

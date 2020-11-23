@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 
+
 namespace fs = std::experimental::filesystem;
 
 
@@ -12,8 +13,10 @@ struct FileSystem{
 
     static std::string current_path;
     static std::string file_name;
+    static auto dirname()->std::string;
 
 };
+
 
 class Use{
 
@@ -34,6 +37,7 @@ std::string FileSystem::file_name           = {};
 
 #define     __pathname      FileSystem::current_path
 #define     __filename      FileSystem::file_name
+#define     __dirname       FileSystem::dirname()
 
 
 #include "../source/filesystem.cpp"

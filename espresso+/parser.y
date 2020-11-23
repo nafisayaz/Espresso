@@ -21,7 +21,7 @@ int yylex (struct lexer * l);
 #define COPY(x, y)  do{ x = malloc(strlen(y)); strcpy(x,y); }while(0) 
 
 
-void yyerror(lexer* l, grammar * p, char const *s){ printf("\e[1;31m%s\n\n\n\n", s); } 
+void yyerror(lexer* l, grammar * p, char const *s){ printf("\e[1;33m%s\n\n\n\n", s); } 
 
 %}
 
@@ -47,7 +47,7 @@ void yyerror(lexer* l, grammar * p, char const *s){ printf("\e[1;31m%s\n\n\n\n",
 
 
 
-%type<s> value
+//%type<s> value
 
 
 %%
@@ -57,12 +57,12 @@ program      : %empty                                      	{  }
 		     | stmts                                       	{  }
 
 stmts        : stmt                                        	{  }
-             | stmts stmt                                  	{  printf("%s", l->text); }
+             | stmts stmt                                  	{ printf("%s", l->text); }
 stmt		 : module_expr ';'
 module_expr  : AUTO VARIABLE '=' ESPRESSO'()'     			{ LOG; printf("%s", l->text); } 
 
 
-value        : STRING                                      	{ LOG; printf("%s", l->text); }
+//value        : STRING                                     { LOG; printf("%s", l->text); }
 
 %%
 

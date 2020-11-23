@@ -84,7 +84,7 @@ int yylex (struct lexer * l);
 #define COPY(x, y)  do{ x = malloc(strlen(y)); strcpy(x,y); }while(0) 
 
 
-void yyerror(lexer* l, grammar * p, char const *s){ printf("\e[1;32m%s\n\n\n\n", s); } 
+void yyerror(lexer* l, grammar * p, char const *s){ printf("\e[1;31m%s\n\n\n\n", s); } 
 
 
 #line 91 "parser.tab.c" /* yacc.c:339  */
@@ -1498,7 +1498,7 @@ int main()
 	lexer l;
 	grammar p;
 
-	//printf("%s", l->text);
+	printf("%s", l->text);
 
 	yyparse(&l, &p);
 }

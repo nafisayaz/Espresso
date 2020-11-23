@@ -7,6 +7,7 @@ const char* Request::header(){
 }
 
 void Request::set_header(const char* header){
+
     m_header = header;
     std::vector<std::string>data = parse_header(header, [](){
         return '\n';
